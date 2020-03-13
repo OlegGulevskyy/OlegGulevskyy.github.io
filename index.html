@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css">
+    <title>TypeRacing v.1.2</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="header">
+            <h3>Navbar</h3>
+        </div>
+
+        <div class="gamebox">
+            <div class="card">
+                <div class="card-body">
+                  <p class="card-text">Canvas for the game display</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contentbox">
+          <div class="text__stats__wrapper">
+            <div class="card output">
+                <div class="card-body">
+                  <p class="card-text" id="textOutput">Text output.</p>
+                </div>
+            </div>
+            <div class="card stats">
+                <div class="card-body">
+                    <div class="stats__row">
+                      <span>Errors </span><span>result</span>
+                    </div>
+                    <div class="stats__row">
+                      <span>WPM </span><span>result</span>
+                    </div>
+                  <div class="stats__row">
+                    <span>Conversations </span><span>result</span>
+                  </div>
+                  
+                </div>
+            </div>
+          </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <button class="btn btn-outline-secondary" type="button" id="startButton">Start</button>
+                    </div>
+                    <input type="text" class="form-control" value="Press Start when you are ready to type" id="input-type">
+                  </div>
+            
+        </div>
+
+        <div class="keyboard">
+            <div class="row functional">
+                <div class="key inactive"><p></p><p></p></div>
+                <div class="key inactive"><p></p><p></p></div>
+                <div class="key inactive"><p></p><p></p></div>
+                <div class="key inactive"><p></p><p></p></div>
+                <div class="key inactive"><p></p><p></p></div>
+                <div class="key inactive"><p></p><p></p></div>
+                <div class="key inactive"><p></p><p></p></div>
+                <div class="key inactive"><p></p><p></p></div>
+                <div class="key inactive"><p></p><p></p></div>
+                <div class="key inactive"><p></p><p></p></div>
+                <div class="key inactive"><p></p><p></p></div>
+                <div class="key inactive"><p></p><p></p></div>
+                <div class="key inactive"><p></p><p></p></div>
+            </div>
+            <div class="row">
+                <div class="key" id="`"><p>~</p><p>`</p></div>
+                <div class="key" id="1"><p>!</p><p>1</p></div>
+                <div class="key" id="2"><p>@</p><p>2</p></div>
+                <div class="key" id="3"><p>#</p><p>3</p></div>
+                <div class="key" id="4"><p>$</p><p>4</p></div>
+                <div class="key" id="5"><p>%</p><p>5</p></div>
+                <div class="key" id="6"><p>^</p><p>6</p></div>
+                <div class="key" id="7"><p>&</p><p>7</p></div>
+                <div class="key" id="8"><p>*</p><p>8</p></div>
+                <div class="key" id="9"><p>(</p><p>9</p></div>
+                <div class="key" id="0"><p>)</p><p>0</p></div>
+                <div class="key" id="-"><p>_</p><p>-</p></div>
+                <div class="key" id="="><p>+</p><p>=</p></div>
+                <div class="key backspace inactive"><p></p><p></p></div>
+            </div>
+            <div class="row">
+                <div class="key backspace inactive"><p></p><p></p></div>
+                <div class="key" id="Q"><p>Q</p></div>
+                <div class="key" id="W"><p>W</p></div>
+                <div class="key" id="E"><p>E</p></div>
+                <div class="key" id="R"><p>R</p></div>
+                <div class="key" id="T"><p>T</p></div>
+                <div class="key" id="Y"><p>Y</p></div>
+                <div class="key" id="U"><p>U</p></div>
+                <div class="key" id="I"><p>I</p></div>
+                <div class="key" id="O"><p>O</p></div>
+                <div class="key" id="P"><p>P</p></div>
+                <div class="key" id="["><p>{</p><p>[</p></div>
+                <div class="key" id="]"><p>}</p><p>]</p></div>
+                <div class="key" id="\"><p>|</p><p>\</p></div>
+            </div>
+            <div class="row">
+                <div class="key capslock inactive"><p></p><p></p></div>
+                <div class="key" id="A"><p>A</p></div>
+                <div class="key" id="S"><p>S</p></div>
+                <div class="key" id="D"><p>D</p></div>
+                <div class="key" id="F"><p>F</p></div>
+                <div class="key" id="G"><p>G</p></div>
+                <div class="key" id="H"><p>H</p></div>
+                <div class="key" id="J"><p>J</p></div>
+                <div class="key" id="K"><p>K</p></div>
+                <div class="key" id="L"><p>L</p></div>
+                <div class="key" id=""><p>:</p><p>;</p></div>
+                <div class="key" id=""><p>"</p><p>'</p></div>
+                <div class="key capslock inactive"><p></p><p></p></div>
+            </div>
+            <div class="row">
+                <div class="key shift inactive"><p></p><p></p></div>
+                <div class="key" id="Z"><p>Z</p></div>
+                <div class="key" id="X"><p>X</p></div>
+                <div class="key" id="C"><p>C</p></div>
+                <div class="key" id="V"><p>V</p></div>
+                <div class="key" id="B"><p>B</p></div>
+                <div class="key" id="N"><p>N</p></div>
+                <div class="key" id="M"><p>M</p></div>
+                <div class="key" id=","><p><</p><p>,</p></div>
+                <div class="key" id="."><p>></p><p>.</p></div>
+                <div class="key" id="?"><p>?</p><p>/</p></div>
+                <div class="key shift inactive"><p></p><p></p></div>
+            </div>
+            <div class="row">
+                <div class="key inactive"><p></p><p></p></div>
+                <div class="key inactive"><p></p><p></p></div>
+                <div class="key inactive"><p></p><p></p></div>
+                <div class="key inactive"><p></p><p></p></div>
+                <div class="key spacebar" id=" "><p></p><p></p></div>
+                <div class="key inactive"><p></p><p></p></div>
+                <div class="key inactive"><p></p><p></p></div>
+                <div class="key inactive"><p></p><p></p></div>
+                <div class="key inactive"><p></p><p></p></div>
+                <div class="key inactive"><p></p><p></p></div>
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="app.js"></script>
+  </body>
+</html>

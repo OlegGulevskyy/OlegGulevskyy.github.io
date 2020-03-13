@@ -1,0 +1,115 @@
+.container {
+    height: 100vh;
+    
+}
+
+.gamebox {
+    height: 20%;
+}
+
+.contentbox {
+    padding: 15px 0;
+}
+
+.gamebox .card {
+    height: 100%;
+}
+
+.text__stats__wrapper {
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+    padding-bottom: 15px;
+    justify-content: space-between;
+}
+
+.text__stats__wrapper .stats {
+    width: 25%;
+}
+
+.text__stats__wrapper .output {
+    width: 75%;
+}
+
+.output {
+    background-color: #e9ebf8;
+}
+
+.stats {
+    height: 100%;
+    border-left: 0px;
+}
+
+.stats p {
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+
+.stats__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* KEYBOARD LAYOUT  START */
+
+.keyboard {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.row {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding-bottom: 10px;
+}
+
+.key {
+    background-color: #BEC3DD;
+    height: 100%;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.key p {
+    margin-bottom: 0;
+}
+
+.inactive {
+    background-color: #e9ebf8;
+}
+
+.functional {
+    height: 35px;
+}
+
+.functional .key {
+    width: 70px;
+}
+
+.backspace {
+    width: 90px;
+}
+
+.capslock {
+    width: 120px;
+}
+
+.shift {
+    width: 145px;
+}
+
+.spacebar {
+    width: 425px;
+}
+
+/* KEYBOARD LAYOUT END */
+
+.js__border {
+    border: 1px solid black;
+}
